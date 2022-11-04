@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+    <?!= include('CSS'); ?>
+  </head>
+  <body>
+   <div class="container">
+     <h2> Registro </h2>
+     <br/>
+    <form id="formularioRegistro" name="formaularioRegistro" class="needs-validation" method="POST" action="<?= pubUrl ?>" novalidate>
+                    
+          <div class="row g-3">
+              <div class="col">
+                  <label for="nombre" class="form-label">Nombre Completo</label>
+                  <input type="text" name ="nombre" id="nombre" class="form-control" placeholder="Nombre" required>
+              </div>
+              <div class="col">
+                  <label for="apellido" class="form-label">Apellido Completo</label>
+                  <input type="text" name ="apellido" id="apellido" class="form-control" placeholder="Apellido" required>
+              </div>
+              <div class="col-auto">
+              
+                <label class="form-label" for="revista">Situación de Revista</label>
+                <select class="form-select" id="revista" name="revista">
+                  <option selected>Elige...</option>
+                  <option value="Titular">Titular</option>
+                  <option value="Interino">Interino</option>
+                  <option value="Suplente">Suplente</option>
+                </select>
+            </div>
+          </div>
+          
+          <div class="row g-3">
+            <div class="col">
+                  <label for="fechaNacimiento" class="form-label">Fecha de Nacimiento</label>
+                  <input type="date" class="form-control" name="fechaNacimiento" id="fechaNacimto" placeholder="dd/mm/aaaa"required>
+            </div>
+            <div class="col">
+                <label for="dni" class="form-label">D.N.I.</label>
+                <input type="text" name ="dni" id="dni" class="form-control" placeholder="D.N.I." required>
+            </div>  
+            <div class="col">
+                <label for="telefono" class="form-label">Teléfono</label>
+                <input type="text" name ="telefono" id="telefono" class="form-control" placeholder="Teléfono" required>
+            </div> 
+            <div class="col">
+                <label for="ciudad" class="form-label">Ciudad</label>
+                <input type="text" name ="ciudad" id="ciudad" class="form-control" placeholder="Ciudad" required>
+            </div>       
+            <div class="col-auto">
+              
+                <label class="form-label" for="departamento">Departamento</label>
+                <select class="form-select" id="departamento" name="departamento">
+                  <option selected>Elige...</option>
+                  <option value="Coronel Felipe Varela">General Felipe Varela</option>
+                  <option value="General Lamadrid">General Lamadrid</option>
+                  <option value="Vinchina">Vinchina</option>
+                  <option value="Chilecito">Chilecito</option>
+                  <option value="Capital">Capital</option>
+                </select>
+            </div>
+          </div>
+          <div class="row g-3">
+              <div class="col">
+                  <label for="direccion" class="form-label">Dirección</label>
+                  <input type="text" name ="direccion" id="direccion" class="form-control" placeholder="Calle" required>
+              </div>  
+              <div class="col">
+                  <label for="numero" class="form-label">Número</label>
+                  <input type="text" name ="numero" id="numero" class="form-control" placeholder="Número" required>
+              </div>  
+              <div class="col">
+                <label for="piso" class="form-label">Piso</label>
+                <input type="text" name ="piso" id="piso" class="form-control" placeholder="Pïso N°" required>
+              </div>  
+              <div class="col">
+                <label for="depto" class="form-label">Depto.</label>
+                <input type="text" name ="depto" id="depto" class="form-control" placeholder="Depto N°" required>
+              </div>  
+          </div>
+                
+          <div class="row g-3">
+              <div class="col">
+                  <label for="email" class="form-label">Correo Electrónico</label>
+                  <input type="email" class="form-control" name="email" id="email" placeholder="ejemplo@mail"required>
+                  <div class="invalid-feedback">Ingresa un correo electrónico válido</div> 
+              </div>
+              <div class="col">
+                  <label for="password" class="form-label">Contraseña</label>
+                  <input type="password" class="form-control" name="password" id="password" placeholder="**********"required>
+              </div>
+          </div>
+        <div class="mb-3">
+            <div class="form-check">
+              <label for="acuerdoPrivacidad" class="form-check-label">Estoy de Acuerdo en subir mis datos</label>
+              <input type="checkbox" class="form-check-input" name="acuerdoPrivacidad" id="acuerdoPrivacidad" checked>
+           </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+    <?!= include('JS'); ?>
+  </body>
+</html>
